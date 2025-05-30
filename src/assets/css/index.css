@@ -15,20 +15,28 @@
 .btn-repo-link {
     width: 100%;
     max-width: 100%;
-    background-color: #00081f98;
-    border-radius: 20px;
+    background-color: #e0e7ff;
+    border-radius: 9999px;
     padding: 5px 10px;
-    color: #003cff;
+    color: #2563eb;
     text-decoration: none;
-    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.733);
-    transition: all 0.3s linear;
-    display: inline-block;
-    text-align: center;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    border: 1.5px solid #93c5fd;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn-repo-link:hover {
-    background-color: #00081f;
+    background-color: #2563eb;
     color: #fff;
-    padding: 5px 40px;
-    transition: all 0.3s linear;
-    box-shadow: 20px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
+    transform: scale(1.12);
+}
+.btn-repo-link img {
+    filter: none;
+    transition: filter 0.2s;
+}
+.btn-repo-link:hover img {
+    filter: brightness(0) invert(1);
 }
