@@ -1,0 +1,19 @@
+{
+  "name": "Dev2Forge",
+  "short_name": "Dev2Forge",
+  "icons": [
+    {
+      "src": "/public/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#060624",
+  "background_color": "#060624",
+  "display": "standalone"
+}
