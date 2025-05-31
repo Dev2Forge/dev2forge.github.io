@@ -1,0 +1,81 @@
+/* Responsive styles for markdown tables */
+.markdown-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+    padding-bottom: 2px;
+    /* Añade un fondo para distinguir el scroll en móvil */
+    background: transparent;
+}
+
+.markdown-table-wrapper > .markdown-table {
+    border-collapse: collapse;
+    min-width: 400px; /* Reduce el mínimo para móvil */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    background: transparent;
+    table-layout: auto; /* Permite que las celdas se ajusten */
+}
+
+.markdown-table-wrapper > .markdown-table th,
+.markdown-table-wrapper > .markdown-table td {
+    border: 1px solid #374151;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    /* Elimina nowrap por defecto */
+    white-space: normal;
+    word-break: break-word;
+}
+
+.markdown-table-wrapper > .markdown-table th {
+    background-color: #1e293b;
+    color: #fff;
+    font-weight: 700;
+}
+
+.markdown-table-wrapper > .markdown-table td {
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+.markdown-table-wrapper > .markdown-table tr:nth-child(even) td {
+    background-color: #1e293b22;
+}
+
+@media (prefers-color-scheme: light) {
+    .markdown-table-wrapper > .markdown-table th {
+        background-color: #f3f4f6;
+        color: #111827;
+    }
+    .markdown-table-wrapper > .markdown-table td {
+        background-color: #fff;
+        color: #1e293b;
+    }
+    .markdown-table-wrapper > .markdown-table th,
+    .markdown-table-wrapper > .markdown-table td {
+        border: 1px solid #d1d5db;
+    }
+    .markdown-table-wrapper > .markdown-table tr:nth-child(even) td {
+        background-color: #f9fafb;
+    }
+}
+
+@media (max-width: 700px) {
+    .markdown-table-wrapper > .markdown-table {
+        font-size: 0.9rem;
+        min-width: 350px;
+        width: 100%;
+        max-width: 100%;
+        /* table-layout: fixed;  // Si quieres columnas iguales, descomenta */
+    }
+    .markdown-table-wrapper > .markdown-table th,
+    .markdown-table-wrapper > .markdown-table td {
+        padding: 0.4rem 0.5rem;
+        white-space: normal;
+        word-break: break-word;
+        font-size: 0.95em;
+    }
+}

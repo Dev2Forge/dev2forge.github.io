@@ -6,9 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadDescription() {
     const req = await fetch('https://api.github.com/users/dev2forge');
-    const res = await req.json();
+    // const res = await req.json();
+
+    // Markdown to HTML conversion
+    const converter = new showdown.Converter({ tables: true });
+    const readme = await fetch('https://raw.githubusercontent.com/Dev2Forge/.github/refs/heads/main/profile/README.md');
+    const readmeText = await readme.text();
+    const html_readme = converter.makeHtml(readmeText);
+
     const description = document.querySelector('#description');
-    description.textContent = res.bio || 'No description available';
+    // description.innerHTML = res.bio || 'No description available';
+    description.innerHTML = html_readme || '';
+    __formatHTML(description);
 }
 
 /**
@@ -71,4 +80,37 @@ async function loadConfigs() {
     const req = await fetch('src/assets/json/configs.json');
     const data = await req.json();
     return data;
+}
+
+function __formatHTML(container) {
+    // Set scrollable tables within the container
+    __setScrollableTables(container);
+
+    // Add event listener to handle click events on links
+    const titleMD = document.querySelector('#dev2forge');
+    const thumbnail = document.querySelector('#thumbnail-dev2forge');
+    // document.querySelector('#title-page').innerHTML = titleMD.innerHTML;
+    titleMD.remove();
+    container.querySelectorAll('img').forEach(async (img) => {
+        const config = await loadConfigs();
+        if (img.src === config.thumbnail1) {
+            thumbnail.src = img.src;
+            img.remove();
+        }
+    });
+}
+
+/**
+ * Set scrollable tables within a container.
+ * @param {HTMLElement} container Container element where tables are located.
+ */
+function __setScrollableTables(container) {
+    console.log(container);
+    container.querySelectorAll('table').forEach((table) => {
+        table.classList.add('markdown-table');
+        const wrapper = document.createElement('div');
+        wrapper.className = 'markdown-table-wrapper';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    });
 }
