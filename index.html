@@ -13,14 +13,14 @@
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dev2forge.software/" />
+        <meta property="og:url" content="https://www.dev2forge.software/" />
         <meta property="og:title" content="Dev2Forge: Tools for Developers & Everyday Users" />
         <meta property="og:description" content="Dev2Forge: Ready-to-use tools for automating tasks, solving problems, and streamlining workflows. Efficient software solutions for your business." />
         <meta property="og:image" content="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/metatag-dev2forge1.jpeg" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://dev2forge.software/" />
+        <meta property="twitter:url" content="https://www.dev2forge.software/" />
         <meta property="twitter:title" content="Dev2Forge: Tools for Developers & Everyday Users" />
         <meta property="twitter:description" content="Dev2Forge: Ready-to-use tools for automating tasks, solving problems, and streamlining workflows. Efficient software solutions for your business." />
         <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/metatag-dev2forge1.jpeg" />
@@ -33,8 +33,9 @@
         <link rel="manifest" href="/public/favicons/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="./src/utils/showdown/showdown.min.js"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+         <script src="./src/utils/tailwind/tailwind-3.4.16" defer></script>
         <link rel="stylesheet" href="./src/assets/css/index.css" />
         <script type="module" src="./src/assets/js/main.js" defer></script>
 
@@ -47,13 +48,27 @@
             gtag('js', new Date());
             gtag('config', 'G-74L9F7VNLD');
         </script>
+
+        <!-- robots.txt -->
+        <meta name="robots" content="index, follow" />
+
+        <!-- Schema.org (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org","@type": "Organization","name": "Dev2Forge","url": "https://www.dev2forge.software/","logo": "https://www.dev2forge.software/public/dev2forge-logo.png",
+          "description": "Dev2Forge: Ready-to-use tools for automating tasks, solving problems, and streamlining workflows. Efficient software solutions for your business.",
+          "founder": {"@type": "Person","name": "Santiago Rivera Marin"},"sameAs": ["https://www.tiktok.com/@dev2forge","https://www.youtube.com/@dev2forge","https://github.com/dev2forge"]}
+        </script>
     </head>
     <body class="bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800 transition-colors duration-300 min-h-screen flex flex-col dark">
         <!-- Header -->
         <header class="w-full flex justify-between items-center p-6 flex-shrink-0">
             <div class="w-full text-center">
-                <!-- <h1 class="text-3xl font-bold inline"><a href="https://github.com/dev2forge" target="_blank" class="no-decoration underline" id="title-page"></a></h1> -->
-                <a href="https://github.com/dev2forge" target="_blank" class="flex justify-center"><img id="thumbnail-dev2forge" class="thumbnail-dev2forge img-fluid" /></a>
+                <h1 class="text-3xl font-bold inline">
+                    <a href="https://github.com/dev2forge" target="_blank" class="flex justify-center">    
+                        <img id="thumbnail-dev2forge" class="thumbnail-dev2forge img-fluid" />
+                    </a>
+                </h1>
             </div>
             <!-- Feature: Add "Toggle Theme" -->
         </header>
