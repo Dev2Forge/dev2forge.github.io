@@ -1,0 +1,10 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loading image...">
+  <title>Loading image...</title>
+  <rect width="50" height="50" rx="12" ry="12" fill="#1f2937">
+    <animate attributeName="fill" values="#1f2937;#374151;#1f2937" dur="1.4s" repeatCount="indefinite" />
+  </rect>
+  <g opacity="0.4">
+    <circle cx="30" cy="30" r="10" fill="#111827" />
+    <path d="M10 40 L20 20 L30 30 L40 10 L50 40 Z" fill="#111827" />
+  </g>
+</svg>

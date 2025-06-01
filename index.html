@@ -34,7 +34,7 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <script defer src="./src/utils/showdown/showdown.min.js"></script>
-         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
         <link rel="stylesheet" href="./src/assets/css/index.css" />
         <script type="module" src="./src/assets/js/main.js" defer></script>
 
@@ -53,10 +53,16 @@
 
         <!-- Schema.org (JSON-LD) -->
         <script type="application/ld+json">
-        {
-          "@context": "https://schema.org","@type": "Organization","name": "Dev2Forge","url": "https://www.dev2forge.software/","logo": "https://www.dev2forge.software/public/dev2forge-logo.png",
-          "description": "Dev2Forge: Ready-to-use tools for automating tasks, solving problems, and streamlining workflows. Efficient software solutions for your business.",
-          "founder": {"@type": "Person","name": "Santiago Rivera Marin"},"sameAs": ["https://www.tiktok.com/@dev2forge","https://www.youtube.com/@dev2forge","https://github.com/dev2forge"]}
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Dev2Forge",
+                "url": "https://www.dev2forge.software/",
+                "logo": "https://www.dev2forge.software/public/dev2forge-logo.png",
+                "description": "Dev2Forge: Ready-to-use tools for automating tasks, solving problems, and streamlining workflows. Efficient software solutions for your business.",
+                "founder": { "@type": "Person", "name": "Santiago Rivera Marin" },
+                "sameAs": ["https://www.tiktok.com/@dev2forge", "https://www.youtube.com/@dev2forge", "https://github.com/dev2forge"]
+            }
         </script>
     </head>
     <body class="bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800 transition-colors duration-300 min-h-screen flex flex-col dark">
@@ -64,8 +70,8 @@
         <header class="w-full flex justify-between items-center p-6 flex-shrink-0">
             <div class="w-full text-center">
                 <h1 class="text-3xl font-bold inline">
-                    <a href="https://github.com/dev2forge" target="_blank" class="flex justify-center">    
-                        <img id="thumbnail-dev2forge" class="thumbnail-dev2forge img-fluid" alt="Dev2Forge Thumbnail, logo thumbnail."/>
+                    <a href="https://github.com/dev2forge" target="_blank" class="flex justify-center">
+                        <img id="thumbnail-dev2forge" class="thumbnail-dev2forge img-fluid" alt="Dev2Forge Thumbnail, logo thumbnail." src="./public/skeleton-img.svg" />
                     </a>
                 </h1>
             </div>
