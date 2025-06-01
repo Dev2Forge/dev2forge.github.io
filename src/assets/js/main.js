@@ -105,7 +105,6 @@ function __formatHTML(container) {
  * @param {HTMLElement} container Container element where tables are located.
  */
 function __setScrollableTables(container) {
-    console.log(container);
     container.querySelectorAll('table').forEach((table) => {
         table.classList.add('markdown-table');
         const wrapper = document.createElement('div');
