@@ -32,8 +32,7 @@ async function loadRepos() {
             if (!configsWeb.ignoreRepos.includes(repo.name)) {
                 const card = document.createElement('div');
                 card.className = 'flex flex-col justify-between items-center w-64 h-64 bg-gray-100 dark:bg-gray-800 p-4 rounded shadow hover:shadow-lg transition snap-start row-span-1';
-                card.innerHTML = `
-                <h2 class="text-xl font-semibold text-center w-full mb-2">${repo.name}</h2>
+                card.innerHTML = `<h2 class="text-xl font-semibold text-center w-full mb-2">${repo.name}</h2>
                 <div class="flex-1 w-full overflow-y-auto mb-2 no-scrollbar">
                     <p class="text-sm text-gray-600 dark:text-gray-300 text-center break-words">${repo.description || 'No description'}</p>
                 </div>
