@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loadDescription() {
-    const req = await fetch('https://api.github.com/users/dev2forge');
-    // const res = await req.json();
-
     // Markdown to HTML conversion
     const converter = new showdown.Converter({ tables: true });
     const readme = await fetch('https://raw.githubusercontent.com/Dev2Forge/.github/refs/heads/main/profile/README.md');
@@ -28,7 +25,7 @@ async function loadRepos() {
     const container = document.querySelector('#carrusel-repos');
     const configsWeb = await loadConfigs();
     try {
-        const res = await fetch('https://api.github.com/orgs/dev2forge/repos');
+        const res = await fetch('https://api.github.com/users/Dev2Forge/repos');
         const repos = await res.json();
         repos.forEach((repo) => {
             // Skip repositories that are not in the configsWeb list
