@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadDescription() {
     // Markdown to HTML conversion
     const converter = new showdown.Converter({ tables: true });
-    const readme = await fetch('https://raw.githubusercontent.com/Dev2Forge/.github/refs/heads/main/profile/README.md');
+    const readme = await fetch('https://raw.githubusercontent.com/Dev2Forge/.github/main/profile/README.md');
     const readmeText = await readme.text();
     const html_readme = converter.makeHtml(readmeText);
 
