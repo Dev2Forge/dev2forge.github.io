@@ -1,4 +1,5 @@
 @import './tables.css';
+@import url('https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css');
 hr {
     margin: 20px 0 !important;
 }
@@ -31,10 +32,10 @@ code {
     width: 80vh;
 }
 
-#carrusel-repos::-webkit-scrollbar {
+.carrusel-img::-webkit-scrollbar {
     display: none;
 }
-#carrusel-repos {
+.carrusel-img {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -69,4 +70,13 @@ code {
 }
 .btn-repo-link:hover img {
     filter: brightness(0) invert(1);
+}
+
+.preview-project-img {
+    border-radius: 20px;
+    box-shadow: 0 0 15px #2000ad;
+}
+
+#new-project-description a {
+    color: rgb(165, 155, 255);
 }

@@ -1,3 +1,5 @@
+import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     loadDescription();
     loadRepos();
@@ -14,7 +16,7 @@ async function loadDescription() {
     const description = document.querySelector('#description');
     // description.innerHTML = res.bio || 'No description available';
     description.innerHTML = html_readme || '';
-    __formatHTML(description);
+    await __formatHTML(description);
 }
 
 /**
@@ -22,7 +24,7 @@ async function loadDescription() {
  * Each repository is displayed in a card format with its name, description, and a link to the repo.
  */
 async function loadRepos() {
-    const container = document.querySelector('#carrusel-repos');
+    const container = document.querySelector('#repositories-container');
     const configsWeb = await loadConfigs();
     try {
         const res = await fetch('https://api.github.com/users/Dev2Forge/repos');
@@ -78,15 +80,18 @@ async function loadConfigs() {
     return data;
 }
 
-function __formatHTML(container) {
+async function __formatHTML(container) {
     // Set scrollable tables within the container
     __setScrollableTables(container);
 
     // Add event listener to handle click events on links
     const titleMD = document.querySelector('#dev2forge');
+    const kofi = document.querySelector('#ko-fi-gitub');
     const thumbnail = document.querySelector('#thumbnail-dev2forge');
-    // document.querySelector('#title-page').innerHTML = titleMD.innerHTML;
+    // document.querySelector('[id*="kofi-widget-overlay"]').remove();
+
     titleMD.remove();
+    kofi.remove();
     container.querySelectorAll('img').forEach(async (img) => {
         const config = await loadConfigs();
         if (img.src === config.thumbnail1) {
@@ -94,6 +99,8 @@ function __formatHTML(container) {
             img.remove();
         }
     });
+
+    imagePreview();
 }
 
 /**
@@ -108,4 +115,14 @@ function __setScrollableTables(container) {
         table.parentNode.insertBefore(wrapper, table);
         wrapper.appendChild(table);
     });
+}
+
+function imagePreview() {
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#my-gallery',
+        children: 'div>a',
+        pswpModule: () => import('https://unpkg.com/photoswipe'),
+    });
+
+    lightbox.init();
 }

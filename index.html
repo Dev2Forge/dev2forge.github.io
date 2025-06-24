@@ -66,6 +66,60 @@
         </script>
     </head>
     <body class="bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800 transition-colors duration-300 min-h-screen flex flex-col dark">
+        <!-- New Project! -->
+        <div class="flex-1 flex flex-col items-center w-full">
+            <h2 class="text-center font-bold mb-10 text-2xl">Stay tuned for updates</h2>
+            <div id="new-project" class="lg:w-[90vh] w-[90vw] rounded-xl shadow-xl shadow-black px-10">
+                <div class="pswp-gallery" id="my-gallery">
+                    <div class="flex justify-center mb-4">
+                        <a href="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/logo-pymd-2.png" data-pswp-width="1200" data-pswp-height="1200" target="_blank">
+                            <img
+                                class="max-w-[300px] h-auto object-contain drop-shadow-2xl drop-shadow-black"
+                                src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/logo-pymd-2.png"
+                                alt="Logo featuring a green snake curled into a circular shape, wearing a red necktie, set against a dark background."
+                            />
+                        </a>
+                    </div>
+                    <div id="new-project-description">
+                        <p>
+                            Feed your files to a snake in a tie &#x1F601;: A <a href="https://doc.qt.io/qtforpython/">PySide6</a> GUI wrapped around <a href="https://github.com/microsoft/markitdown">Markitdown</a>: choose in
+                            <a href="https://www.adobe.com/acrobat/resources/document-files/docx.html">DOCX</a>, <a href="https://www.dhiwise.com/post/understanding-html-file-types-a-comprehensive-guide">HTML</a>, <a href="https://www.dropbox.com/resources/what-is-a-zip-file">ZIP</a>,
+                            <a href="https://www.adobe.com/uk/acrobat/resources/document-files/ebook-files/epub.html">EPUB</a> and more, and out pops clean, future-proof <a href="https://www.adobe.com/uk/acrobat/resources/document-files/text-files/md.html">.md</a> — no terminal required &#x1F680;.
+                        </p>
+                    </div>
+                    <div class="carrusel-img h-full grid grid-rows-1 auto-cols-max grid-flow-col gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory w-full py-4">
+                        <a href="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/previews-beta/1.png" data-pswp-width="927" data-pswp-height="662" target="_blank">
+                            <img
+                                title="Preview 1"
+                                class="w-[200px] h-auto object-contain"
+                                src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/previews-beta/1.png"
+                                alt="Screenshot of the 'Select Language' modal: a dark, centred dialog listing 'English - GB' with a UK flag and 'Español - CO' with a Colombian flag, overlaid on a faint circular snake-and-tie logo background."
+                            />
+                        </a>
+                        <a href="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/previews-beta/2.png" data-pswp-width="934" data-pswp-height="665" target="_blank">
+                            <img
+                                title="Preview 2"
+                                class="w-[200px] h-auto object-contain"
+                                src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/previews-beta/2.png"
+                                alt="Screenshot of the main interface: left panel showing Markdown script ('# PYBET - Video Presentation Narration Script…'), right panel blurred preview, and a circular 'Convert' button at the bottom, all on a dark background with the snake-and-tie logo subtly visible behind."
+                            />
+                        </a>
+
+                        <a href="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/previews-beta/3.png" data-pswp-width="926" data-pswp-height="661" target="_blank">
+                            <img
+                                title="Preview 3"
+                                class="w-[200px] h-auto object-contain"
+                                src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/previews-beta/3.png"
+                                alt="Screenshot of the welcome screen: a centred circular logo of a green snake wearing a red tie; above it the heading 'Welcome to [Name]'; below it a list of keyboard shortcuts ('Ctrl + O', 'Ctrl + L', 'Ctrl + T', 'Ctrl + W'), all in white text on a dark backdrop."
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-gray-800 border-2 my-2 w-full" />
+
         <!-- Header -->
         <header class="w-full flex justify-between items-center p-6 flex-shrink-0">
             <div class="w-full text-center">
@@ -129,9 +183,14 @@
                     </svg>
                 </a>
             </div>
+
+            <hr class="border-gray-800 border-2 my-2 w-full" />
+
             <!-- Repos -->
-            <section id="carrusel-repos" class="h-full grid grid-rows-1 auto-cols-max grid-flow-col gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory w-full py-4">
+            <section class="w-full">
+                <header><h2 class="text-center text-3xl mb-10">Projects Repositories</h2></header>
                 <!-- Repos will be injected here -->
+                <div id="repositories-container" class="carrusel-img h-full grid grid-rows-1 auto-cols-max grid-flow-col gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory w-full py-4"></div>
             </section>
 
             <!-- Description page -->
@@ -155,7 +214,7 @@
 
         <!-- Footer -->
         <footer class="w-full mt-0 text-center flex-shrink-0 fixed bottom-0 left-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-2 z-10">
-            <p class="text-sm">© 2025 Dev2Forge. All rights reserved.</p>
+            <p class="text-sm">©2025 Dev2Forge.</p>
         </footer>
 
         <!-- Ko-Fi Script - Floating Button -->
