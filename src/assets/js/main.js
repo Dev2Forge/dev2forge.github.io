@@ -88,10 +88,10 @@ async function __formatHTML(container) {
     const titleMD = document.querySelector('#dev2forge');
     const kofi = document.querySelector('#ko-fi-gitub');
     const thumbnail = document.querySelector('#thumbnail-dev2forge');
-    // document.querySelector('[id*="kofi-widget-overlay"]').remove();
 
     titleMD.remove();
     kofi.remove();
+
     container.querySelectorAll('img').forEach(async (img) => {
         const config = await loadConfigs();
         if (img.src === config.thumbnail1) {
