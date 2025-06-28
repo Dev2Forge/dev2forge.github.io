@@ -3,7 +3,6 @@ import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lig
 document.addEventListener('DOMContentLoaded', () => {
     loadDescription();
     loadRepos();
-    loadFollowers();
 });
 
 async function loadDescription() {
@@ -53,25 +52,6 @@ async function loadRepos() {
     } catch (e) {
         container.innerHTML = '<p class="text-red-500">Failed to load repositories.</p>';
     }
-}
-
-/**
- * Load followers from GitHub API and display them as a horizontal avatar carousel.
- * Only the profile pictures are shown, as per the new design.
- */
-async function loadFollowers() {
-    const req = await fetch('https://api.github.com/users/Dev2Forge/followers');
-    const response = await req.json();
-    const container = document.querySelector('#followers-container');
-    response.forEach((follower) => {
-        const img = document.createElement('img');
-        img.src = follower.avatar_url;
-        img.alt = follower.login;
-        img.title = follower.login;
-        img.className = 'w-20 h-20 rounded-full object-cover snap-center border-2 border-gray-300 dark:border-gray-700 cursor-pointer transition hover:scale-110';
-        img.onclick = () => window.open(follower.html_url, '_blank');
-        container.appendChild(img);
-    });
 }
 
 async function loadConfigs() {
