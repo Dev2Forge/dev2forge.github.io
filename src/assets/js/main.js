@@ -100,7 +100,7 @@ function __setScrollableTables(container) {
 function imagePreview() {
     const lightbox = new PhotoSwipeLightbox({
         gallery: '#my-gallery',
-        children: 'div>a',
+        children: '#my-gallery > div:not(#new-project-description) > a',
         pswpModule: () => import('https://unpkg.com/photoswipe'),
     });
 

@@ -15,6 +15,7 @@ code {
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
     user-select: all;
+    color: rgb(179, 255, 0);
 }
 
 #description h2 {
