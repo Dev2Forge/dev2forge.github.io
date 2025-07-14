@@ -1,4 +1,12 @@
 {
     "ignoreRepos": ["discussions-about", "dev2forge.github.io", ".github", "docs"],
-    "thumbnail1": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/thumbanil-dev2forge1.webp"
+    "thumbnail1": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/thumbanil-dev2forge1.webp",
+    "logos": {
+        "bridgex": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/bridgex-v0.1.0.webp",
+        "sqlazo": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/sqlazo-v0.2.0.webp",
+        "pdf2wordx": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/pdf2wordx-v2.1.2.svg",
+        "e-srm": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/e-srm-v0.1.0.webp",
+        "chromologger": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/chromologger-v0.1.9.webp",
+        "chromolog": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/chromolog-v0.2.5.webp"
+    }
 }
