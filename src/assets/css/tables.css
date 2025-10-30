@@ -24,7 +24,7 @@
 .markdown-table-wrapper > .markdown-table td {
     border: 1px solid #374151;
     padding: 0.5rem 1rem;
-    text-align: left;
+    text-align: center;
     /* Elimina nowrap por defecto */
     white-space: normal;
     word-break: break-word;
