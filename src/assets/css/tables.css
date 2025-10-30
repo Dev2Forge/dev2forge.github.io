@@ -41,7 +41,7 @@
     color: #e5e7eb;
     display: flex;
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
