@@ -39,13 +39,7 @@
 .markdown-table-wrapper > .markdown-table td {
     background-color: #111827;
     color: #e5e7eb;
-    display: flex;
     text-align: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
 }
 
 .markdown-table-wrapper > .markdown-table tr:nth-child(even) td {
