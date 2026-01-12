@@ -1,5 +1,5 @@
 {
-    "ignoreRepos": ["discussions-about", "dev2forge.github.io", ".github", "docs", "Init-Venv"],
+    "ignoreRepos": ["discussions-about", "dev2forge.github.io", ".github", "docs", "Init-Venv", "css-eoq"],
     "thumbnail1": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/thumbanil-dev2forge1.webp",
     "logos": {
         "bridgex": "https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/logos/bridgex-v0.1.0.webp",
