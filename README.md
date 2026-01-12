@@ -20,8 +20,8 @@ Our repositories are organised, with certain internal repositories automatically
 
 ## Links
 
-* 🌐 **Website**: [www.dev2forge.software](https://dev2forge.is-a.software/)
-* 📫 **Projects Docs**: [docs.dev2forge.software](https://docs.dev2forge.software/)
+* 🌐 **Website**: [dev2forge.is-a.software](https://dev2forge.is-a.software/)
+* 📫 **Projects Docs**: [docs.dev2forge.is-a.software](https://docs.dev2forge.is-a.software/)
 * 🐙 **GitHub**: [github.com/dev2forge](https://github.com/dev2forge)
 * 📺 **YouTube**: [@dev2forge](https://www.youtube.com/@dev2forge)
 * 🎵 **TikTok**: [@dev2forge](https://www.tiktok.com/@dev2forge)
